@@ -1,4 +1,6 @@
 from django.shortcuts import redirect, render, redirect
+from django.contrib import messages
+from summit.models import Message
 
 
 def summit_page(request):
@@ -15,5 +17,11 @@ def submit_message(request):
     print(email)
     print(mobile_number)
     print(about_you)
+
+    save_message = Message(
+        name=name, email=email, mobile_number=mobile_number, message=about_you
+    )
+    save_message.save()
+    messages.success(request, "Message successfully submitted!")
 
     return redirect("summit:summit_page")

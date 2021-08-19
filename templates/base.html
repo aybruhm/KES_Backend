@@ -76,6 +76,17 @@
             </ul>
 
             <div class="coming_soon">
+
+                <!-- Messages -->
+                {% if messages %}
+                {% for message in messages %}
+                <div class="alert text-center {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% endif %}
+                <!-- /.Messages -->
+
                 <div class="row">
                     <div class="head col-md-8">
                         <div class="animate__animated animate__fadeInLeftBig animate__slow">

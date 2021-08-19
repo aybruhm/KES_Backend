@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  font-family: "Recursive", sans-serif;
+  scroll-behavior: smooth;
+}
+
+section.coming_section {
+  height: 100vh;
+  position: relative;
+  background-color: #0c0c0c;
+  background: url("../images/background_one_refined.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+section.coming_section nav.coming_nav {
+  background-color: transparent;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+section.coming_section img.logo {
+  width: 100%;
+  height: 50px;
+}
+section.coming_section a.toggle-button {
+  color: #c05e18;
+  border: 2px solid #c05e18;
+  padding: 8px 20px 6px 20px;
+  border-radius: 10px;
+}
+section.coming_section a.toggle-button svg, section.coming_section a.toggle-button i {
+  font-size: 18px;
+}
+section.coming_section ul.nav_tabs {
+  list-style: none;
+  display: flex;
+}
+section.coming_section ul.nav_tabs li.nav-item a.nav-link {
+  color: #198754;
+}
+section.coming_section ul.nav_tabs li.nav-item:hover {
+  border-bottom: 2px solid #198754;
+  transition: all 0.3s ease-in-out;
+}
+section.coming_section ul.nav_tabs li.nav-item:hover a.nav-link {
+  color: #198754;
+  transition: all 0.2s ease-in-out;
+}
+section.coming_section ul.nav_tabs_mobile {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0%;
+  background-color: #0c0c0c;
+  transition: all 0.2s ease-in-out;
+}
+section.coming_section ul.nav_tabs_mobile li.nav-item a.nav-link {
+  color: #198754;
+}
+section.coming_section ul.nav_tabs_mobile li.nav-item:hover {
+  border-bottom: 2px solid #198754;
+  transition: all 0.3s ease-in-out;
+}
+section.coming_section ul.nav_tabs_mobile li.nav-item:hover a.nav-link {
+  color: #198754;
+  transition: all 0.2s ease-in-out;
+}
+section.coming_section div.coming_soon {
+  margin-top: 4%;
+}
+section.coming_section div.coming_soon div.head p.h2 {
+  color: #198754;
+  font-size: 48px;
+  font-weight: 550;
+}
+section.coming_section div.coming_soon div.head span.change {
+  color: #fff !important;
+  font-weight: 600;
+  font-size: 50px !important;
+}
+section.coming_section div.coming_soon div.head p.h5 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #198754;
+  text-transform: uppercase;
+}
+section.coming_section div.coming_soon div.head p.time_date {
+  margin-bottom: 40px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 600;
+}
+section.coming_section div.coming_soon div.head a.register {
+  color: #fff;
+  font-weight: 500;
+  background-color: #198754;
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+section.coming_section div.coming_soon div.head a.register:hover {
+  background-color: #198754;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+section.manifesto__section {
+  height: 100%;
+  position: relative;
+  background-color: #0c0c0c;
+  padding-bottom: 60px;
+}
+section.manifesto__section div.manifesto {
+  padding-top: 5%;
+}
+section.manifesto__section div.manifesto div.head p.h3 {
+  color: #198754 !important;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+section.manifesto__section div.manifesto div.head p.h5 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+section.manifesto__section div.manifesto div.head p.h5 span.green {
+  color: #198754 !important;
+}
+section.manifesto__section div.manifesto div.head div.register_div {
+  padding-top: 20px;
+}
+section.manifesto__section div.manifesto div.head a.register {
+  color: #fff;
+  font-weight: 500;
+  background-color: #198754 !important;
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+section.manifesto__section div.manifesto div.head a.register:hover {
+  background-color: #198754 !important;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+section.gallery__section {
+  height: 100%;
+  position: relative;
+  background-color: #0c0c0c;
+  padding-bottom: 60px;
+}
+section.gallery__section div.gallery {
+  padding-top: 5%;
+}
+section.gallery__section div.gallery div.head p.h3 {
+  color: #198754;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+section.gallery__section div.gallery div.body {
+  margin-top: 30px;
+}
+section.gallery__section div.gallery div.body div.grid__one,
+section.gallery__section div.gallery div.body div.grid__two,
+section.gallery__section div.gallery div.body div.grid__three,
+section.gallery__section div.gallery div.body div.grid__four,
+section.gallery__section div.gallery div.body div.grid__five {
+  display: grid;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(3, 3fr);
+}
+section.gallery__section div.gallery div.body img {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+section.gallery__section div.gallery div.body div.grid__two img {
+  width: 100%;
+  height: 100%;
+}
+section.gallery__section div.gallery div.body div.grid__three img {
+  width: 100%;
+  height: 100%;
+}
+section.gallery__section div.gallery div.body div.grid__four img,
+section.gallery__section div.gallery div.body div.grid__five img {
+  width: 100%;
+}
+section.gallery__section div.gallery div.body div.grid__four div {
+  margin-right: 10px;
+}
+section.gallery__section div.gallery div.body div.grid__four div:last-child {
+  margin-right: 0%;
+}
+section.gallery__section div.gallery div.body div.summit__grid {
+  width: 100%;
+  height: 100%;
+}
+section.gallery__section div.gallery div.body div.image_one {
+  margin-right: 10px;
+}
+section.gallery__section div.gallery div.body div.image_one p.h5,
+section.gallery__section div.gallery div.body div.image_three p.h5,
+section.gallery__section div.gallery div.body div.image_four p.h5 {
+  font-weight: 800;
+  color: #fff;
+}
+section.gallery__section div.gallery div.body div.image_one img,
+section.gallery__section div.gallery div.body div.image_four img {
+  border-radius: 0%;
+}
+section.gallery__section div.gallery div.body div.image_three p.h5 {
+  text-align: center;
+}
+section.gallery__section div.gallery div.body div.grid__two__caption {
+  margin-bottom: 30px;
+}
+section.gallery__section div.gallery div.body div.grid__two__caption p.h5 {
+  margin-top: 20px;
+  color: #fff;
+  text-align: center;
+}
+section.gallery__section div.gallery div.body div.eighteen__img {
+  margin-bottom: 30px;
+}
+section.gallery__section div.gallery div.body div.eighteen__img p.h5 {
+  margin-top: 0%;
+  text-align: left;
+  color: #fff;
+}
+section.gallery__section div.gallery div.body div.grid__five div.five {
+  margin-right: 10px;
+}
+section.gallery__section div.gallery div.body div.grid__five div.five:last-child {
+  margin-right: 0%;
+}
+section.gallery__section div.gallery div.body div.agric__img {
+  text-align: center;
+}
+section.gallery__section div.gallery div.body div.agric__img p.h5 {
+  color: #fff;
+}
+
+section.blog__section {
+  height: 100vh;
+  background-color: #000;
+  border-top: 0.2px solid #f0f8ff;
+  border-bottom: 0.2px solid #f0f8ff;
+}
+section.blog__section div.blog {
+  text-align: center;
+  padding-top: 5%;
+}
+section.blog__section div.blog p.h3 {
+  font-size: 32px;
+  color: #f0f8ff;
+  padding-bottom: 5px;
+}
+section.blog__section div.blog span._latest {
+  font-size: 17px;
+  font-weight: 400;
+  width: 300px;
+  margin: auto;
+  color: #a5aaaf;
+}
+section.blog__section div._blog_body {
+  margin-top: 50px;
+}
+section.blog__section div._blog_body div.card-img img {
+  height: 250px;
+  width: 100%;
+}
+section.blog__section div._blog_body div.card-body p.h5 {
+  margin-bottom: 20px;
+  color: #f0f8ff;
+}
+section.blog__section div._blog_body div.card-body p.h5 a._link {
+  color: #f0f8ff !important;
+  text-decoration: none;
+}
+section.blog__section div._blog_body div.card-body p.h5 a._link:hover {
+  transition: all 0.3s ease-in-out;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #f0f8ff;
+          text-decoration-color: #f0f8ff;
+}
+section.blog__section div._blog_body div.card-body span.date {
+  color: #a5aaaf;
+}
+
+section.contact__us__section {
+  height: 100%;
+  position: relative;
+  background-color: #0c0c0c;
+  background-image: url("../images/refined_background.png");
+  padding-bottom: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 5%;
+}
+section.contact__us__section div.contact__us div.head p.h3 {
+  color: #198754;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+section.contact__us__section div.contact__us div.head p.h5 {
+  color: #198754;
+}
+section.contact__us__section div.contact__us div.head span.h6 {
+  color: #fff;
+}
+section.contact__us__section div.contact__us div.head span.h6 a {
+  color: #fff;
+}
+section.contact__us__section div.contact__us div.body {
+  margin-top: 40px;
+}
+section.contact__us__section div.contact__us div.body form.contact_form div.form-group {
+  margin-bottom: 20px;
+}
+section.contact__us__section div.contact__us div.body form.contact_form label {
+  color: #198754;
+  font-size: 19px;
+  margin-bottom: 6px;
+}
+section.contact__us__section div.contact__us div.body form.contact_form input {
+  background-color: transparent;
+  border-radius: 0%;
+  height: 50px;
+}
+section.contact__us__section div.contact__us div.body form.contact_form textarea {
+  border-radius: 0%;
+  background-color: transparent;
+}
+section.contact__us__section div.contact__us div.body form.contact_form button.submit_btn {
+  color: #fff;
+  font-weight: 500;
+  background-color: #198754;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 0%;
+  width: 300px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+section.contact__us__section div.contact__us div.body form.contact_form button.submit_btn:hover {
+  background-color: #198754;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+footer.footer__section {
+  background-color: #000;
+  text-align: center;
+  padding: 10px;
+}
+footer.footer__section div._copyright span.logo {
+  font-size: 48px;
+  color: #198754;
+  font-weight: 600;
+  font-style: italic;
+}
+footer.footer__section div._trademark {
+  margin-top: 10px;
+}
+footer.footer__section div._trademark p.h6 {
+  font-size: 12px;
+  color: #a5aaaf;
+  font-weight: 400;
+}
+footer.footer__section div._trademark p.h6 a._abram {
+  text-decoration: none;
+  color: #198754;
+}
+footer.footer__section div._trademark p.h6 a._abram :hover {
+  transition: 0.3s;
+  border-bottom: 5px solid #ffffff !important;
+}
+
+@media screen and (max-width: 789px) {
+  ul.mobile-none {
+    display: none !important;
+  }
+
+  div.coming_soon div.head {
+    margin-top: 30px !important;
+  }
+  div.coming_soon div.head p.h2 {
+    font-size: 36px !important;
+  }
+  div.coming_soon div.head p.h5 {
+    font-size: 16px !important;
+  }
+  div.coming_soon div.head a.register {
+    margin-top: 10px !important;
+  }
+
+  section.manifesto__section,
+section.gallery__section {
+    height: 100% !important;
+  }
+  section.manifesto__section div.head p.h3,
+section.gallery__section div.head p.h3 {
+    margin-top: 30px !important;
+  }
+
+  div.grid__one,
+div.grid__two,
+div.grid__three,
+div.grid__four,
+div.grid__five {
+    margin: auto !important;
+    width: auto !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  span.logo {
+    font-size: 38px !important;
+  }
+
+  div.grid__four div {
+    margin-right: 0% !important;
+  }
+
+  section.blog__section {
+    height: 100% !important;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  div.contact__us p.h3 {
+    margin-top: 40px !important;
+  }
+}/*# sourceMappingURL=styles.css.map */

@@ -40,7 +40,24 @@ INSTALLED_APPS = [
 
     'summit.apps.SummitConfig',
     'blog.apps.BlogConfig',
+
+    'ckeditor'
 ]
+
+
+# CkEditor COnfiguration
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'height': 300,
+        'width': 1200,
+    },
+}
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -76,12 +93,31 @@ WSGI_APPLICATION = 'kes.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if DEBUG is True:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
+elif DEBUG is False:
+    DATABASES = {
+
+        'default': {
+
+            'ENGINE': 'django.db.backends.postgresql',
+
+            'NAME': "",
+
+            'USER': "",
+
+            'PASSWORD': "",
+
+            'HOST': "",
+
+            'PORT': 5432,
+        }
+    }
 
 
 # Password validation

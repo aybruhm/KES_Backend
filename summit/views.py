@@ -32,3 +32,11 @@ def submit_message(request: HttpRequest) -> HttpResponse:
     messages.success(request, "Message successfully submitted!")
 
     return redirect("summit:summit_page")
+
+
+def page_not_found(request, exception):
+    return render(exception, "summit/404.html")
+
+
+def error_500(exception):
+    return render(exception, "summit/505.html")

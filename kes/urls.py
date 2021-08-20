@@ -18,11 +18,19 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+# Error Handling
+from django.conf.urls import handler404, handler500
+
+handler404 = "summit.views.page_not_found"
+handler500 = "summit.views.error_500"
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("summit.urls")),
-    path("blog/", include("blog.urls"))
+    path("blog/", include("blog.urls")),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

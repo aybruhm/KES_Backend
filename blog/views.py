@@ -4,8 +4,13 @@ from blog.models import Post
 
 
 def single_post(request: HttpRequest, slug: str) -> HttpResponse:
+    post = Post.objects.get(slug=slug)
+    latest_posts = Post.objects.all()[:3]
 
-    context = {}
+    context = {
+        "post": post,
+        "latest_posts": latest_posts
+    }
 
     return render(request, "blog/blog-single.html", context)
 

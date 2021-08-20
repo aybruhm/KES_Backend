@@ -8,6 +8,7 @@ from django.utils.text import slugify
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=500, blank=True, null=True)
     image = models.ImageField(null=True, blank=True, upload_to="blog/")
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)

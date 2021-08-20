@@ -18,161 +18,33 @@ Latest News
 
             <div class="body">
                 <div class="row animate__animated animate__fadeInDownBig animate__slower">
+                    {% for post in posts %}
                     <div class="col-md-4">
                         <div class="image">
-                            <img src="assets/images/background_one.jpeg" alt="" class="img-responsive">
+                            <img src="{{ post.image.url }}" alt="" class="img-responsive">
                         </div>
 
                         <div class="_blog_head">
-                            <a href="" class="h5">
-                                Northwood University and Limkokwing explore future collaboration
+                            <a href="{{ post.get_absolute_url }}" class="h5">
+                                {{ post.title }}
                             </a>
 
                             <p class="h6 date_posted">
-                                22 Feb 2020
+                                {{ post.date_created|timesince }} ago
                             </p>
                         </div>
 
                         <div class="_blog_body">
                             <p class="h6">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dignissimos!
+                                {{ post.content|truncatewords:16 }}
                             </p>
 
-                            <a href="" class="h6">
+                            <a href="{{ post.get_absolute_url }}" class="h6">
                                 Read <i class="fa fa-chevron-right" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
-
-                    <div class="col-md-4">
-                        <div class="image">
-                            <img src="assets/images/background_one.jpeg" alt="" class="img-responsive">
-                        </div>
-
-                        <div class="_blog_head">
-                            <a href="" class="h5">
-                                Northwood University and Limkokwing explore future collaboration
-                            </a>
-
-                            <p class="h6 date_posted">
-                                22 Feb 2020
-                            </p>
-                        </div>
-
-                        <div class="_blog_body">
-                            <p class="h6">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dignissimos!
-                            </p>
-
-                            <a href="" class="h6">
-                                Read <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="image">
-                            <img src="assets/images/background_one.jpeg" alt="" class="img-responsive">
-                        </div>
-
-                        <div class="_blog_head">
-                            <a href="" class="h5">
-                                Northwood University and Limkokwing explore future collaboration
-                            </a>
-
-                            <p class="h6 date_posted">
-                                22 Feb 2020
-                            </p>
-                        </div>
-
-                        <div class="_blog_body">
-                            <p class="h6">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dignissimos!
-                            </p>
-
-                            <a href="" class="h6">
-                                Read <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="image">
-                            <img src="assets/images/background_one.jpeg" alt="" class="img-responsive">
-                        </div>
-
-                        <div class="_blog_head">
-                            <a href="" class="h5">
-                                Northwood University and Limkokwing explore future collaboration
-                            </a>
-
-                            <p class="h6 date_posted">
-                                22 Feb 2020
-                            </p>
-                        </div>
-
-                        <div class="_blog_body">
-                            <p class="h6">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dignissimos!
-                            </p>
-
-                            <a href="" class="h6">
-                                Read <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="image">
-                            <img src="assets/images/background_one.jpeg" alt="" class="img-responsive">
-                        </div>
-
-                        <div class="_blog_head">
-                            <a href="" class="h5">
-                                Northwood University and Limkokwing explore future collaboration
-                            </a>
-
-                            <p class="h6 date_posted">
-                                22 Feb 2020
-                            </p>
-                        </div>
-
-                        <div class="_blog_body">
-                            <p class="h6">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dignissimos!
-                            </p>
-
-                            <a href="" class="h6">
-                                Read <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="image">
-                            <img src="assets/images/background_one.jpeg" alt="" class="img-responsive">
-                        </div>
-
-                        <div class="_blog_head">
-                            <a href="" class="h5">
-                                Northwood University and Limkokwing explore future collaboration
-                            </a>
-
-                            <p class="h6 date_posted">
-                                22 Feb 2020
-                            </p>
-                        </div>
-
-                        <div class="_blog_body">
-                            <p class="h6">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, dignissimos!
-                            </p>
-
-                            <a href="" class="h6">
-                                Read <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>

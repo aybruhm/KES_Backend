@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'summit.apps.SummitConfig'
+    'summit.apps.SummitConfig',
+    'blog.apps.BlogConfig',
 ]
 
 MIDDLEWARE = [

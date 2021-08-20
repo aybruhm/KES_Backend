@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Important Metas -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{% static "css/animate.min.css" %}">
+
+    <!-- Awesome Font Kit -->
+    <script src="https://kit.fontawesome.com/6e47be172b.js" crossorigin="anonymous"></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/" type="image/x-icon">
+
+    <!-- Title -->
+    <title>Kogi Economic Summit 2021 | {% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+    <!-- Blog -->
+    <section class="blog">
+        <div class="container">
+            <nav class="navbar navbar-expand-sm coming_nav">
+                <a href="#" class="navbar-brand">
+                    <img src="{% static "images/image_two.jpeg" %}" alt="logo" class="logo">
+                </a>
+
+                <!-- Toggle Button -->
+                <a href="#" class="toggle-button d-lg-none" id="toggle-button">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </a>
+
+                <!-- Nav tabs -->
+                <ul class="nav_tabs mobile-none">
+                    <li class="nav-item">
+                        <a href="#manifesto" class="nav-link">Manifesto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url "blog:posts" %}" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact_us" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <ul class="nav_tabs_mobile d-none" id="nav-tabs">
+                <li class="nav-item">
+                    <a href="#manifesto" class="nav-link">Manifesto</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#blog" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact_us" class="nav-link">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    {% block content %}
+
+    {% endblock content %}
+
+    <!-- Footer Section -->
+    <footer class="footer__section">
+        <div class="container">
+            <div class="_copyright">
+                <span class="logo">
+                    The Investment and Entrepreneurs Summit 2021 is one of the scheduled activities for the
+                    forthcoming event
+                    titled; <span class="green">FROM KOGI TO NIGERIA!</span> The summit is going to be a PPP
+                    (Public-Private-Partnership).
+                </span>
+            </div>
+
+            <div class="_trademark">
+                <p class="h6">
+                    Copyright © 2021 Kogi Economic Summit. All Right Reserved.
+                </p>
+
+                <p class="h6">
+                    Designed & Built in the beautiful city of Lokoja, Kogi by <a
+                        href="https://api.whatsapp.com/send/?phone=2348137281916" class="_abram" id="_abram">Israel
+                        Abraham.</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static "js/main.js" %}"></script>
+</body>
+
+</html>

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1gjt_w*@7+51t(9bwbojm!^5a)qq%q1%2#w9fuot)zikv3-e@=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "orcapelladigital-kogicommerce.com.ng"]
 
 
 # Application definition

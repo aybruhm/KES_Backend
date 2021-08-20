@@ -33,7 +33,7 @@
     <section class="coming_section">
         <div class="container">
             <nav class="navbar navbar-expand-sm coming_nav">
-                <a href="#" class="navbar-brand">
+                <a href="{% url "summit:summit_page" %}" class="navbar-brand">
                     <img src="{% static "images/image_two.jpeg" %}" alt="logo" class="logo">
                 </a>
 
@@ -61,6 +61,9 @@
             </nav>
 
             <ul class="nav_tabs_mobile d-none" id="nav-tabs">
+                <li class="nav-item">
+                    <a href="{% url "summit:summit_page" %}" class="nav-link">Home</a>
+                </li>
                 <li class="nav-item">
                     <a href="https://{{ request.get_host }}/#manifesto" class="nav-link">Manifesto</a>
                 </li>

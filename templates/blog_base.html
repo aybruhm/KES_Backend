@@ -45,16 +45,16 @@
                 <!-- Nav tabs -->
                 <ul class="nav_tabs mobile-none">
                     <li class="nav-item">
-                        <a href="#manifesto" class="nav-link">Manifesto</a>
+                        <a href="https://{{ request.get_host }}/#manifesto" class="nav-link">Manifesto</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#gallery" class="nav-link">Gallery</a>
+                        <a href="https://{{ request.get_host }}/#gallery" class="nav-link">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a href="{% url "blog:posts" %}" class="nav-link">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact_us" class="nav-link">Contact Us</a>
+                        <a href="https://{{ request.get_host }}/#contact_us" class="nav-link">Contact Us</a>
                     </li>
                 </ul>
 

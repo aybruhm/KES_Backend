@@ -12,7 +12,7 @@
         <div class="blog">
             <div class="head">
 
-                <a href="" class="news_link">
+                <a href="{% url "blog:posts" %}" class="news_link">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
 
                     Latest News
@@ -25,40 +25,19 @@
                     <div class="col-md-8 animate__animated animate__fadeInDownBig animate__slower">
                         <div class="head">
                             <p class="h5">
-                                Northwood University and Limkokwing explore future collaboration
+                                {{ post.title }}
                             </p>
 
                             <span class="date_posted">
-                                22 Feb 2020
+                                Posted: {{ post.date_created|timesince }} ago
                             </span>
 
-                            <img src="assets/images/background_one.jpeg" alt="" class="img-responsive">
+                            <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-responsive w-100">
                         </div>
 
                         <div class="body">
                             <p class="h5">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam ullam optio
-                                sint nemo eaque non impedit maiores quae saepe. Ut sunt perferendis earum nam!
-                            </p>
-
-                            <p class="h5">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam ullam optio
-                                sint nemo eaque non impedit maiores quae saepe. Ut sunt perferendis earum nam!
-                            </p>
-
-                            <p class="h5">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam ullam optio
-                                sint nemo eaque non impedit maiores quae saepe. Ut sunt perferendis earum nam!
-                            </p>
-
-                            <p class="h5">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam ullam optio
-                                sint nemo eaque non impedit maiores quae saepe. Ut sunt perferendis earum nam!
-                            </p>
-
-                            <p class="h5">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima aliquam ullam optio
-                                sint nemo eaque non impedit maiores quae saepe. Ut sunt perferendis earum nam!
+                                {{ post.content }}
                             </p>
 
                             <p class="h5 share">
@@ -83,48 +62,21 @@
                         <div class="meta_">
 
                             <div class="row">
+                                {% for post in latest_posts %}
                                 <div class="col-md-12 mb-4">
                                     <div class="image">
-                                        <img src="assets/images/background_one.jpeg" alt="">
+                                        <img src="{{ post.image.url }}" alt="{{ post.title }}">
                                     </div>
 
-                                    <a href="" class="h5">
-                                        The Diversity Effect of Limkokwing
+                                    <a href="{{ post.get_absolute_url }}" class="h5">
+                                        {{ post.title }}
                                     </a>
 
                                     <p class="date_posted h6">
-                                        19 Feb 2020
+                                        Posted: {{ post.date_created|timesince }} ago
                                     </p>
                                 </div>
-
-                                <div class="col-md-12 mb-4">
-                                    <div class="image">
-                                        <img src="assets/images/background_one.jpeg" alt="">
-                                    </div>
-
-                                    <a href="" class="h5">
-                                        The Diversity Effect of Limkokwing
-                                    </a>
-
-                                    <p class="date_posted h6">
-                                        19 Feb 2020
-                                    </p>
-                                </div>
-
-                                <div class="col-md-12 mb-4">
-                                    <div class="image">
-                                        <img src="assets/images/background_one.jpeg" alt="">
-                                    </div>
-
-                                    <a href="" class="h5">
-                                        The Diversity Effect of Limkokwing
-                                    </a>
-
-                                    <p class="date_posted h6">
-                                        19 Feb 2020
-                                    </p>
-                                </div>
-
+                                {% endfor %}
                             </div>
                         </div>
                     </div>

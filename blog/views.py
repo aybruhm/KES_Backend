@@ -5,7 +5,7 @@ from blog.models import Post
 
 def single_post(request: HttpRequest, slug: str) -> HttpResponse:
     post = Post.objects.get(slug=slug)
-    latest_posts = Post.objects.all()[:3]
+    latest_posts = Post.objects.all().order_by("-date_created")[:3]
 
     context = {
         "post": post,
@@ -16,7 +16,7 @@ def single_post(request: HttpRequest, slug: str) -> HttpResponse:
 
 
 def posts(request: HttpRequest) -> HttpResponse:
-    posts = Post.objects.all()
+    posts = Post.objects.all().order_by("-date_created")
 
     context = {
         "posts": posts

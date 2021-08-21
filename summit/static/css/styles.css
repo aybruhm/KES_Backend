@@ -13,12 +13,12 @@ section.coming_section {
   height: 100vh;
   position: relative;
   background-color: #0c0c0c;
-  background: url("../images/background_one_refined.png");
+  background: url("../images/background_one_refined.png") fixed -15%;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-section.coming_section nav.coming_nav {
+section.coming_section div.coming_nav {
   background-color: transparent;
   padding: 20px;
   display: flex;
@@ -244,6 +244,14 @@ section.gallery__section div.gallery div.body div.agric__img {
 section.gallery__section div.gallery div.body div.agric__img p.h5 {
   color: #fff;
 }
+section.gallery__section div.gallery div.body div.comfort__img {
+  margin-top: 4%;
+  text-align: center;
+}
+section.gallery__section div.gallery div.body div.comfort__img p.h5,
+section.gallery__section div.gallery div.body div.comfort__img p.h6 {
+  color: #fff;
+}
 
 section.blog__section {
   height: 100vh;
@@ -296,7 +304,7 @@ section.contact__us__section {
   height: 100%;
   position: relative;
   background-color: #0c0c0c;
-  background-image: url("../images/refined_background.png");
+  background: url("../images/refined_background.png") fixed -15%;
   padding-bottom: 60px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -383,6 +391,11 @@ footer.footer__section div._trademark p.h6 a._abram :hover {
 }
 
 @media screen and (max-width: 789px) {
+  img.logo {
+    height: 25% !important;
+    width: 25% !important;
+  }
+
   ul.mobile-none {
     display: none !important;
   }
@@ -419,6 +432,14 @@ div.grid__five {
     grid-template-columns: repeat(1, 1fr) !important;
   }
 
+  section.gallery__section div.gallery div.body div.image_one,
+section.gallery__section div.gallery div.body div.image_three {
+    margin-bottom: 100px;
+  }
+  section.gallery__section div.gallery div.body div.image_four {
+    margin-bottom: 140px;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -440,5 +461,10 @@ div.grid__five {
 
   div.contact__us p.h3 {
     margin-top: 40px !important;
+  }
+}
+@media (min-width: 576px) {
+  .navbar-expand-sm {
+    justify-content: space-between !important;
   }
 }/*# sourceMappingURL=styles.css.map */

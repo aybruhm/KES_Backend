@@ -14,12 +14,12 @@ section.coming_section{
     height: 100vh;
     position: relative;
     background-color: #0c0c0c;
-    background: url("../images/background_one_refined.png");
+    background: url("../images/background_one_refined.png") fixed -15%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 
-    nav.coming_nav{
+    div.coming_nav{
         background-color: transparent;
         padding: 20px;
         display: flex;
@@ -327,6 +327,16 @@ section.gallery__section {
                     color: #fff;
                 }
             }
+
+            div.comfort__img{
+                margin-top: 4%;
+                text-align: center;
+
+                p.h5,
+                p.h6{
+                    color: #fff;
+                }
+            }
         }
     }
 }
@@ -395,12 +405,13 @@ section.contact__us__section {
     height: 100%;
     position: relative;
     background-color: #0c0c0c;
-    background-image: url("../images/refined_background.png");
+    background: url("../images/refined_background.png") fixed -15%;
     padding-bottom: 60px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-padding-top: 5%;
+    padding-top: 5%;
+    
     div.contact__us {
         
 
@@ -512,6 +523,10 @@ footer.footer__section {
 
 // Media Queries
 @media screen and (max-width: 789px) {
+    img.logo{
+        height: 25% !important;
+        width: 25% !important;
+    }
     ul.mobile-none{
         display: none !important;
     }
@@ -556,6 +571,21 @@ footer.footer__section {
         grid-template-columns: repeat(1, 1fr) !important;
     }
 
+    section.gallery__section {
+        div.gallery {
+            div.body {
+                div.image_one,
+                div.image_three {
+                    margin-bottom: 100px;
+                }
+
+                div.image_four{
+                    margin-bottom: 140px;
+                }
+            }
+        }
+    }
+
     img {
         width: 100%;
         height: 100%;
@@ -579,5 +609,11 @@ footer.footer__section {
         p.h3{
             margin-top: 40px !important;
         }
+    }
+}
+
+@media (min-width: 576px){
+    .navbar-expand-sm {
+        justify-content: space-between !important;
     }
 }

@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-1gjt_w*@7+51t(9bwbojm!^5a)qq%q1%2#w9fuot)zikv3-e@='
+SECRET_KEY = 'django-insecure-1gjt_w*@7+51t(9bwbojm!^5a)qq%q1%2#w9fuot)zikv3-='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -107,13 +107,13 @@ elif DEBUG is False:
 
             'ENGINE': 'django.db.backends.postgresql',
 
-            'NAME': "",
+            'NAME': "orcapell_kes_db",
 
-            'USER': "",
+            'USER': "orcapell_abram",
 
-            'PASSWORD': "",
+            'PASSWORD': "I$r@3lK@p3r$k7",
 
-            'HOST': "",
+            'HOST': "localhost",
 
             'PORT': 5432,
         }
@@ -156,14 +156,25 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = "static"
-STATICFILES_DIRS = [
-    BASE_DIR / "summit/static"
-]
+if DEBUG is True:
+    STATIC_URL = "/static/"
+    STATIC_ROOT = "static"
+    STATICFILES_DIRS = [
+        BASE_DIR / "summit/static"
+    ]
 
-MEDIA_URL = "/media/"
-MEDIA_ROOT = "media"
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = "/media/"
+
+elif DEBUG is False:
+    STATIC_URL = "/static/"
+    STATIC_ROOT = "/home/orcapell/public_html/static"
+    STATICFILES_DIRS = [
+        BASE_DIR / "summit/static"
+    ]
+
+    MEDIA_URL = "/media/"
+    MEDIA_ROOT = "/home/orcapell/public_html/media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
